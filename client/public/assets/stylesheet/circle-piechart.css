@@ -1,0 +1,449 @@
+.circle,
+.circle:before,
+.circle:after {
+  border-radius: 50%;
+}
+.menunav {
+  position: absolute;
+  display: block;
+  margin: 0px auto;
+  min-width: 10em;
+  width: 100%;
+  max-width: 551px;
+  z-index: 3;
+}
+.menunav ul {
+  position: relative;
+  padding: 50%;
+  max-width: 0;
+  max-height: 0;
+  list-style: none;
+  overflow: hidden;
+  z-index: 2;
+  border: 1px solid #004256;
+}
+.menunav li {
+  position: absolute;
+}
+.slice {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 100% 100%;
+  border: 1px solid #00506a;
+}
+/* Cell orientation */
+.one {
+  transform: rotate(0deg) skewX(60deg);
+}
+.two {
+  transform: rotate(30deg) skewX(60deg);
+}
+.three {
+  transform: rotate(60deg) skewX(60deg);
+}
+.four {
+  transform: rotate(90deg) skewX(60deg);
+}
+.five {
+  transform: rotate(120deg) skewX(60deg);
+}
+.six {
+  transform: rotate(150deg) skewX(60deg);
+}
+.seven {
+  transform: rotate(180deg) skewX(64deg);
+}
+.eight {
+  transform: rotate(205.7142857deg) skewX(64deg);
+}
+.nine {
+  transform: rotate(231.4285714deg) skewX(64deg);
+}
+.ten {
+  transform: rotate(257.1428571deg) skewX(64deg);
+}
+.eleven {
+  transform: rotate(282.8571428deg) skewX(64deg);
+}
+.twelve {
+  transform: rotate(308.5714285deg) skewX(64deg);
+}
+.thirteen {
+  transform: rotate(334deg) skewX(64deg);
+}
+
+.menunav label {
+  cursor: pointer;
+}
+.slice label {
+  display: block;
+  width: 548px;
+  height: 548px;
+  transform: skew(-64deg) rotate(-77deg);
+  line-height: 1.9;
+  text-align: center;
+  background-color: #fff;
+  max-width: 600px;
+}
+
+.two label {
+    transform: skew(-60deg) rotate(-77deg);
+}
+
+.three label {
+    transform: skew(-60deg) rotate(-77deg);
+}
+
+.four label {
+    transform: skew(-60deg) rotate(-77deg);
+}
+
+.five label {
+    transform: skew(-60deg) rotate(-77deg);
+}
+
+.six label {
+    transform: skew(-60deg) rotate(-77deg);
+}
+
+.one label {
+    transform: skew(-60deg) rotate(-77deg);
+}
+
+.gray_color.slice label {
+  color: #5291a5;
+}
+.slice label span {
+  display: block;
+}
+.slice label:hover {
+  color: #ffffff;
+  border: 1px solid #00506a;
+  transition: all 0.5s ease;
+  background: #00506a;
+}
+
+.gray_color.slice label:hover {
+  border-color: #68a6ba;
+  background: #68a6ba;
+}
+
+.slice label:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-family: "roboto_condensedregular";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: #00506a;
+  padding: 0 15px;
+  word-break: break-all;
+  z-index: 9;
+}
+.circle .menuname:hover {
+  color: white;
+  transition: color 0.5s ease;
+}
+
+.menudesc {
+  width: 280px;
+}
+
+.slice label {
+  font-weight: 700;
+  line-height: 5;
+}
+.circle label {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.1;
+  padding: 15px;
+  color: #00506a;
+  position: relative;
+}
+
+.circle label i.fa {
+  display: block;
+  position: absolute;
+  top: 29%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  font-size: 30px;
+  color: #b5b2b2;
+}
+.slice label:hover i.fa {
+  color: #fff;
+  font-size: 35px;
+}
+
+.slice p {
+  width: 100px;
+  margin-left: 185px;
+}
+
+.unsel {
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 185px;
+  height: 185px;
+  text-align: center;
+  background-color: #66a6bb;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 5px #00506a;
+}
+.unsel label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 9;
+  color: #fff;
+  font-weight: normal;
+}
+.middle {
+  z-index: 1;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  text-align: center;
+  background-color: white;
+}
+.menunav:after {
+  /* content: ''; */
+  position: absolute;
+  top: -40px;
+  bottom: -40px;
+  right: -40px;
+  left: -40px;
+  background-image: linear-gradient(180deg, #00506a, #66a6bb);
+  border-radius: 100%;
+  z-index: 1;
+  border: 1px solid #055169;
+}
+.visible {
+  /* display: block; */
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: #00506a;
+  width: 185px;
+  height: 185px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid #fff;
+  box-shadow: 1px 1px 5px #00506a;
+}
+
+div#menu14 {
+  background-color: #66a6bb;
+}
+.hidden {
+  display: none;
+}
+.visible ul {
+  list-style-type: none;
+}
+.visible details ul {
+  list-style-type: square;
+}
+.visible a {
+  font-size: 120%;
+  text-decoration: none;
+  color: purple;
+}
+.Reseau a {
+  font-size: 160%;
+}
+.Reseau a:hover {
+  color: red;
+}
+.circle label span {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: contents;
+}
+.menumain {
+  position: relative;
+  width: 551px;
+  height: 551px;
+  margin: 15px auto;
+  outline: 40px solid #000000;
+  border-radius: 100%;
+}
+
+@media (min-width: 1200px) {
+  .menumain {
+    left: 10px;
+  }
+}
+
+.menumain h3 {
+  font-size: 17px;
+  text-align: center;
+  color: #fff;
+  word-break: break-all;
+  margin-bottom: 0;
+}
+
+.menumain h2 {
+  font-size: 20px;
+}
+
+.menumain i.fa {
+  display: block;
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+@media (max-width: 1199px) {
+  .rightSec-img {
+    margin-bottom: 60px;
+    margin-top: 60px;
+  }
+}
+
+.circle_txt {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  color: #fff;
+  font-size: 18px;
+}
+.up {
+  top: -36px;
+}
+.down {
+  bottom: -36px;
+}
+
+.bg_green1 {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  right: -40px;
+  bottom: auto;
+  z-index: 1;
+  background-image: linear-gradient(180deg, #00506a, transparent);
+  border: 1px solid #00506a;
+  height: calc(50% + 40px);
+  background: #055169;
+}
+
+.bg_green2 {
+  position: absolute;
+  top: auto;
+  left: -40px;
+  right: -40px;
+  bottom: -40px;
+  /* border-radius: 100%; */
+  z-index: 1;
+  background-image: linear-gradient(180deg, transparent, #68a6ba);
+  border: 1px solid #00506a;
+  background: #68a6ba;
+  height: calc(50% + 40px);
+}
+
+
+
+.slice div {
+  position: relative;
+  left: 5px;
+  top: 10px;
+}
+.one div {
+  transform: rotate(77deg);
+  top: 15px;
+}
+.two div {
+  transform: rotate(46deg);
+}
+.three div {
+  transform: rotate(17deg);
+}
+
+.four div {
+  transform: rotate(-13deg);
+  top: 20px;
+}
+
+.five div {
+  transform: rotate(-44deg);
+  top: 20px;
+}
+
+.six div {
+  transform: rotate(-73deg);
+  left: 14px;
+}
+
+.seven div {
+  transform: rotate(-104deg);
+  top: 15px;
+  left: -8px;
+}
+
+.eight div {
+  transform: rotate(-129deg);
+  left: 0px;
+}
+.nine div {
+  transform: rotate(206deg);
+}
+.ten div {
+  transform: rotate(179deg);
+  left: 0;
+}
+.eleven div {
+  transform: rotate(154deg);
+  top: 15px;
+  left: 0;
+}
+.twelve  div {
+  transform: rotate(128deg);
+  top: 20px;
+}
+.thirteen  div {
+  transform: rotate(103deg);
+  top: 15px;
+}
+
+.main_bg {
+  position: absolute;
+  border-radius: 100%;
+  overflow: hidden;
+  left: -50px;
+  top: -50px;
+  right: -50px;
+  bottom: -50px;
+  border: 2px solid #055169;
+}
