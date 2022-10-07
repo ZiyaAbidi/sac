@@ -9,9 +9,8 @@ const Auth = () => {
     return (
         <>
             <Helmet>
-                <meta charSet="utf-8" />
-                <title>Admin SAC-Group</title>
-                <link rel="stylesheet" href="assets/admin/css/style.css" />
+                <title>Admin</title>
+                <link rel="stylesheet" href="css/style.css" />
             </Helmet>
 
             <Header />

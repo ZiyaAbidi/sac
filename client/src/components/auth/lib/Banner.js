@@ -7,7 +7,7 @@ const Banner = (props) => {
             <div className="pgn_stap">
                 <div className="breadcream">
                     <ul>
-                        <li><Link to='/dashboard'> <img src="assets/admin/img/home.png" alt="Dashboard" /> Dashboard</Link></li>
+                        <li><Link to='/dashboard'> <img src="./img/home.png" alt="Dashboard" /> Dashboard</Link></li>
                         <li>/</li>
                         <li>{props.title}</li>
                     </ul>

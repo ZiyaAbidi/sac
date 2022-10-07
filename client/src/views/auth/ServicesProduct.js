@@ -7,15 +7,15 @@ const ServicesProduct = () => {
   return (
     <main className="main">
       <div className="main-wapr">
-        <Aside />
+        <Aside class="active"/>
 
         <div className="rightSection">
-          <Banner />
+        <Banner title="Services" desc="We need some basic information about your company, the product or services that it provides, and where it operates." class="" />
 
           <div className="custom-padding">
             <div className="content_sec bg_white">
               <div className="add-btn">
-                <a href="create-campaign.html"><img src="assets/admin/img/rocket.png" alt="rocket" /> Create new
+                <a href="create-campaign.html"><img src="./img/rocket.png" alt="rocket" /> Create new
                   Service</a>
               </div>
 
@@ -41,8 +41,8 @@ const ServicesProduct = () => {
 
                 <tbody>
                   <tr>
-                    <td className="logo"><img src="assets/admin/img/img1.png" alt="logo" className="img-fluid" /></td>
-                    <td className="banner"><img src="assets/admin/img/banner1.png" alt="banner" className="img-fluid" />
+                    <td className="logo"><img src="./img/img1.png" alt="logo" className="img-fluid" /></td>
+                    <td className="banner"><img src="./img/banner1.png" alt="banner" className="img-fluid" />
                     </td>
                     <td className="w200p f-16">Summer festival 2022 for the best of us</td>
                     <td className="f-16">Draft</td>
@@ -51,17 +51,17 @@ const ServicesProduct = () => {
                     <td className="w110p">250$ 0.15 ETH</td>
                     <td>150</td>
                     <td className="no_wrap">
-                      <a href="#"><img src="assets/admin/img/edit.png" alt="edit" /> <span>Edit</span></a>
-                      <a href="#"><img src="assets/admin/img/delete.png" alt="delete" />
+                      <a href="#"><img src="./img/edit.png" alt="edit" /> <span>Edit</span></a>
+                      <a href="#"><img src="./img/delete.png" alt="delete" />
                         <span>Trash</span></a>
-                      <a href="#"><img src="assets/admin/img/send.png" alt="live" /> <strong><span>Go
+                      <a href="#"><img src="./img/send.png" alt="live" /> <strong><span>Go
                         Live!</span></strong></a>
                     </td>
                   </tr>
 
                   <tr>
-                    <td className="logo"><img src="assets/admin/img/img1.png" alt="logo" className="img-fluid" /></td>
-                    <td className="banner"><img src="assets/admin/img/banner1.png" alt="banner" className="img-fluid" />
+                    <td className="logo"><img src="./img/img1.png" alt="logo" className="img-fluid" /></td>
+                    <td className="banner"><img src="./img/banner1.png" alt="banner" className="img-fluid" />
                     </td>
                     <td className="w200p f-16">Summer festival 2022 for the best of us</td>
                     <td className="f-16">Draft</td>
@@ -70,17 +70,17 @@ const ServicesProduct = () => {
                     <td className="w110p">250$ 0.15 ETH</td>
                     <td>150</td>
                     <td className="no_wrap">
-                      <a href="#"><img src="assets/admin/img/edit.png" alt="edit" /> <span>Edit</span></a>
-                      <a href="#"><img src="assets/admin/img/delete.png" alt="delete" />
+                      <a href="#"><img src="./img/edit.png" alt="edit" /> <span>Edit</span></a>
+                      <a href="#"><img src="./img/delete.png" alt="delete" />
                         <span>Trash</span></a>
-                      <a href="#"><img src="assets/admin/img/send.png" alt="live" /> <strong><span>Go
+                      <a href="#"><img src="./img/send.png" alt="live" /> <strong><span>Go
                         Live!</span></strong></a>
                     </td>
                   </tr>
 
                   <tr>
-                    <td className="logo"><img src="assets/admin/img/img1.png" alt="logo" className="img-fluid" /></td>
-                    <td className="banner"><img src="assets/admin/img/banner1.png" alt="banner" className="img-fluid" />
+                    <td className="logo"><img src="./img/img1.png" alt="logo" className="img-fluid" /></td>
+                    <td className="banner"><img src="./img/banner1.png" alt="banner" className="img-fluid" />
                     </td>
                     <td className="w200p f-16">Summer festival 2022 for the best of us</td>
                     <td className="f-16">Draft</td>
@@ -89,10 +89,10 @@ const ServicesProduct = () => {
                     <td className="w110p">250$ 0.15 ETH</td>
                     <td>150</td>
                     <td className="no_wrap">
-                      <a href="#"><img src="assets/admin/img/edit.png" alt="edit" /> <span>Edit</span></a>
-                      <a href="#"><img src="assets/admin/img/delete.png" alt="delete" />
+                      <a href="#"><img src="./img/edit.png" alt="edit" /> <span>Edit</span></a>
+                      <a href="#"><img src="./img/delete.png" alt="delete" />
                         <span>Trash</span></a>
-                      <a href="#"><img src="assets/admin/img/send.png" alt="live" /> <strong><span>Go
+                      <a href="#"><img src="./img/send.png" alt="live" /> <strong><span>Go
                         Live!</span></strong></a>
                     </td>
                   </tr>

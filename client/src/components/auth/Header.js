@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
             <div className="col-sm-3">
 
               <div className="logo">
-                <Link to='/dashboard'><img src="assets/admin/img/logo.png" alt="logo" className="img-fluid" /></Link>
+                <Link to='dashboard'><img src="./img/logo.png" alt="logo" className="img-fluid" /></Link>
               </div>
 
             </div>
@@ -21,10 +21,10 @@ const Header = () => {
               <div className="user-info">
                 <ul>
                   <li>
-                    <Link to='/dashboard' className="user-name">Abbas Abidi</Link>
+                    <Link to='dashboard' className="user-name">Abbas Abidi</Link>
                   </li>
-                  <li><Link to='/dashboard' className="user"><i className="fa fa-user"></i></Link></li>
-                  <li><Link to='/dashboard'><i className="fa fa-bell"></i>
+                  <li><Link to='dashboard' className="user"><i className="fa fa-user"></i></Link></li>
+                  <li><Link to='dashboard'><i className="fa fa-bell"></i>
                     <span className="notification">2</span></Link></li>
                 </ul>
               </div>
@@ -44,10 +44,10 @@ const Header = () => {
 
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
-                <li><Link to='/products'>Services</Link></li>
-                <li><Link to='/dashboard'>Clients</Link></li>
-                <li><Link to='/dashboard'>Insights</Link></li>
-                <li><Link to='/dashboard'>Careers</Link></li>
+                <li><NavLink to='products'>Services</NavLink></li>
+                <li><NavLink to='dashboard'>Clients</NavLink></li>
+                <li><NavLink to='dashboard'>Insights</NavLink></li>
+                <li><NavLink to='dashboard'>Careers</NavLink></li>
               </ul>
             </div>
 

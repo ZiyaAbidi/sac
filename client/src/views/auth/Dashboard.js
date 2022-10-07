@@ -33,7 +33,7 @@ const Dashboard = () => {
                   </div>
 
                   <div className="add-btn">
-                    <a href="create-campaign.html"><img src="assets/admin/img/rocket.png" alt="rocket" /> Create
+                    <a href="create-campaign.html"><img src="./img/rocket.png" alt="rocket" /> Create
                       new
                       Service</a>
                   </div>
@@ -54,7 +54,7 @@ const Dashboard = () => {
                   </div>
 
                   <div className="add-btn">
-                    <a href="create-campaign.html"><img src="assets/admin/img/rocket.png" alt="rocket" /> Create
+                    <a href="create-campaign.html"><img src="./img/rocket.png" alt="rocket" /> Create
                       Client</a>
                   </div>
                 </div>
@@ -72,10 +72,10 @@ const Dashboard = () => {
 
                   <h4>What’s up with Yootribe ?</h4>
 
-                  <p><strong><a href="#"><img src="assets/admin/img/spotify.png" alt="spotify"
+                  <p><strong><a href="#"><img src="./img/spotify.png" alt="spotify"
                     className="img-fluid" /></a>
                     and Yootribe partnership to create NFT !</strong></p>
-                  <img src="assets/admin/img/img4.png" alt="" className="img-fluid mb-35" />
+                  <img src="./img/img4.png" alt="" className="img-fluid mb-35" />
                   <p>Content of a page when looking at its layout. The point of using Loremp <br />
                     Many desktopublishing packages and web page editors now use Loremp <br />
                     Ipsum as their default model text, and a search for 'lorem ipsum.</p>
@@ -90,7 +90,7 @@ const Dashboard = () => {
 
 
       <div className="img-bottom-right">
-        <img src="assets/admin/img/bottom-right.png" alt="" className="img-fluid" />
+        <img src="./img/bottom-right.png" alt="" className="img-fluid" />
       </div>
 
     </main>
