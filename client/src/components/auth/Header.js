@@ -21,10 +21,10 @@ const Header = () => {
               <div className="user-info">
                 <ul>
                   <li>
-                    <Link to='dashboard' className="user-name">Abbas Abidi</Link>
+                    <Link to='profile' className="user-name">Abbas Abidi</Link>
                   </li>
-                  <li><Link to='dashboard' className="user"><i className="fa fa-user"></i></Link></li>
-                  <li><Link to='dashboard'><i className="fa fa-bell"></i>
+                  <li><Link to='profile' className="user"><i className="fa fa-user"></i></Link></li>
+                  <li><Link to='notification'><i className="fa fa-bell"></i>
                     <span className="notification">2</span></Link></li>
                 </ul>
               </div>
@@ -45,15 +45,15 @@ const Header = () => {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li><NavLink to='products'>Services</NavLink></li>
-                <li><NavLink to='dashboard'>Clients</NavLink></li>
-                <li><NavLink to='dashboard'>Insights</NavLink></li>
-                <li><NavLink to='dashboard'>Careers</NavLink></li>
+                <li><NavLink to='clients'>Clients</NavLink></li>
+                <li><NavLink to='insights'>Insights</NavLink></li>
+                <li><NavLink to='careers'>Careers</NavLink></li>
               </ul>
             </div>
 
 
             <ul className="navbar-right">
-              <li>Need some help ? <Link to=''> Click here</Link></li>
+              <li>Need some help ? <Link to='contact'> Click here</Link></li>
             </ul>
           </div>
         </nav>

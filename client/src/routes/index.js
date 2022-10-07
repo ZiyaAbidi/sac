@@ -13,7 +13,7 @@ import Home from '../views/pages/Home'
 import Insights from '../views/pages/Insights';
 import Layout from '../views/pages/Layout';
 import Services from '../views/pages/Services';
-import ServicesProduct from '../views/auth/ServicesProduct';
+import Products from '../views/auth/Products';
 
 const Index = () => {
     return (
@@ -33,7 +33,7 @@ const Index = () => {
 
             <Route path="/admin" element={<Auth />}>
                 <Route path='dashboard' element={<Dashboard />} />
-                <Route path='products' element={<ServicesProduct />} />
+                <Route path='products' element={<Products />} />
             </Route>
         </Routes>
     )
