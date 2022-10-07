@@ -23,7 +23,7 @@ body {
   font-family: "robotoregular", sans-serif;
   font-size: 15px;
   color: #000;
-  background: #e9e9e9;
+  background-color: #e9e9e9 !important;
 }
 body .navbar-default .navbar-nav > .active > a,
 body .navbar-default .navbar-nav > .active > a:focus,
@@ -214,6 +214,9 @@ footer {
 }
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 9;
 }
 .header.sticky {
   position: fixed;
@@ -347,7 +350,8 @@ footer {
   }
 }
 .navbarCustom .navbar-default .navbar-nav li a:hover,
-.navbarCustom .navbar-default .navbar-nav li.active a {
+.navbarCustom .navbar-default .navbar-nav li.active a,
+.navbarCustom .navbar-default .navbar-nav li a.active {
   color: #066d8e;
 }
 @media (max-width: 767px) {
@@ -3603,6 +3607,8 @@ ul.star-rank.sm li {
   float: left;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  zoom: 1;
 }
 @media (max-width: 767px) {
   .media {
@@ -4950,7 +4956,7 @@ ul.star-rank.sm li {
   background-image: url("../img/bg-img.png");
   padding: 0 0 25px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
 }
 @media (max-width: 991px) {
   .marketplace-section {
@@ -7438,16 +7444,16 @@ ount-caracteres {
 }
 
 .marketplace-section .tab-pane .title h3 {
-    margin-top: 47px;
-    margin-bottom: 0;
+  margin-top: 47px;
+  margin-bottom: 0;
 }
 
 .marketplace-section .tab-pane#tab3 .title h3 {
-    margin-bottom: 47px;
+  margin-bottom: 47px;
 }
 
 .marketplace-section .tab-pane#tab4 .title h3 {
-    color: #106b8b;
+  color: #106b8b;
 }
 
 /* boxSec */
@@ -7534,6 +7540,7 @@ ount-caracteres {
   width: 100%;
   text-align: right;
   font-style: italic;
+  font-size: 14px;
 }
 @media (max-width: 767px) {
   #client_carousel2 .clinet-feedback h5 {
@@ -7879,6 +7886,7 @@ span.img {
   background-image: -webkit-linear-gradient(top left, #eff0f3, #e5e6eb);
   background-image: linear-gradient(to bottom right, #eff0f3, #e5e6eb);
   border: none;
+  margin-bottom: 15px;
 }
 @media (max-width: 768px) {
   .contact-section .media {
@@ -7902,7 +7910,7 @@ span.img {
   }
 }
 .contact-section .media .media-body {
-  padding: 20px 30px;
+  padding: 5px 30px;
 }
 .contact-section .media .media-body p {
   font-size: 24px;
@@ -7942,7 +7950,7 @@ span.img {
   position: absolute;
   color: #fff;
   font-size: 0;
-  width: 11px;
+  width: 30px;
   height: 30px;
   background-size: 10px;
   background-color: #066d8e;
@@ -8235,10 +8243,11 @@ span.img {
   background: rgb(0 0 0 / 70%);
   display: block;
   width: 100%;
-  padding: 15px;
+  padding: 15px 10px;
   font-weight: bold;
 }
 .carrer-sec .img-style img {
+  width: 100%;
 }
 .carrer-sec .content-style {
   position: absolute;
@@ -8513,9 +8522,12 @@ span.img {
   font-size: 18px;
   font-family: "robotoregular";
   text-transform: uppercase;
+  margin-bottom: 0;
 }
 .pyramid-container .content p {
   font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 0;
 }
 
 #pyramid-level-1,
@@ -8904,13 +8916,17 @@ area[title]:hover::after {
 .flag_lang ul {
   display: flex;
   gap: 10px;
+  margin-bottom: 0;
 }
 
 .flag_lang ul li {
   box-shadow: 3px 3px 6px #bfc3cf, -3px -3px 6px #fff;
   position: relative;
 }
-
+.flag_lang ul li.login {
+  box-shadow: none;
+  line-height: 0;
+}
 .flag_lang ul li.active {
 }
 
@@ -8938,10 +8954,12 @@ area[title]:hover::after {
   /* display: none; */
 }
 
-.marketplace-section .tab-pane#tab3 {background: #afc8d2;}
+.marketplace-section .tab-pane#tab3 {
+  background: #afc8d2;
+}
 
 .marketplace-section .tab-pane#tab2 {
-    background: #607d8b;
+  background: #607d8b;
 }
 
 .marketplace-section .tab-pane.active {
@@ -8955,6 +8973,11 @@ div#client_carousel {
 }
 section.carrer {
   padding-bottom: 50px;
+}
+
+.carrer .w-20p {
+  padding-left: 0;
+  padding-right: 0;
 }
 /* die-saulem */
 .die-saulem {
@@ -8986,6 +9009,9 @@ section.carrer {
   justify-content: space-between;
   z-index: 2;
   padding: 0 70px;
+}
+.boxinline-saulen.owl-carousel {
+  z-index: 2;
 }
 
 .boxinline-saulen:after,
@@ -9073,7 +9099,7 @@ section.carrer {
 /* die-saulem */
 
 #tab3 .service-front {
-    height: 350px;
+  height: 350px;
 }
 
 .insights_pg.marketplace-section .tab-pane {
@@ -9082,4 +9108,26 @@ section.carrer {
 
 .insights_pg.marketplace-section .tab-pane.active {
   display: block;
+  opacity: 1;
+}
+
+iframe {
+  display: block;
+}
+
+.auth_form {
+  background: #fff;
+  -webkit-box-shadow: 0 0 10px 0 rgb(19 46 85 / 30%);
+  -moz-box-shadow: 0 0 10px 0 rgba(19, 46, 85, 0.3);
+  box-shadow: 0 0 10px 0 rgb(19 46 85 / 30%);
+  padding: 35px;
+  border: 1px solid #e2e2e2;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+p.forget {
+  float: right;
+  margin-bottom: 0;
+  margin-top: -40px;
 }

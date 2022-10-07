@@ -1,15 +1,16 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/lib/Header';
-import Footer from './components/lib/Footer';
-import index from './routes';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+
+import Index from './routes/Index';
+import ScrollTop from './components/templates/ScrollTop';
 
 function App() {
   return (
     <>
-      <Header />
-      <index />
-      <Footer />
+      <ScrollTop />
+
+      <Index />
     </>
   );
 }
