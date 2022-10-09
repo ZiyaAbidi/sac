@@ -9,10 +9,9 @@ const Footer = () => {
           <div className="col-md-12">
             <div className="footer-menu">
               <ul>
-                <li><Link to='/'>Terms</Link></li>
-                <li><Link to='/'>Privacy Policy</Link></li>
-                <li>SAC-Group is powered by <Link to=''>Infoicon</Link>
-                </li>
+                <li><Link to='terms'>Terms</Link></li>
+                <li><Link to='privacy-policy'>Privacy Policy</Link></li>
+                <li>SAC-Group is powered by <Link to='dashboard'>Infoicon</Link></li>
               </ul>
             </div>
           </div>

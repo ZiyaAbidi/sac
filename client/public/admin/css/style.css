@@ -731,11 +731,11 @@ aside .sidebar li a:hover span {
   background-color: #fff;
   color: #05506d;
 }
-aside .sidebar li.active a {
+aside .sidebar li.active a, aside .sidebar li a.active {
   background-color: #05506d;
   color: #fff;
 }
-aside .sidebar li.active a span {
+aside .sidebar li.active a span, aside .sidebar li a.active span {
   background-color: #fff;
   color: #05506d;
 }

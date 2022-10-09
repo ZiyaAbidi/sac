@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Banner from '../../components/auth/lib/Banner'
 
 const Dashboard = () => {
@@ -16,26 +17,31 @@ const Dashboard = () => {
                 <div className="content_sec bg_white dashboard_sec">
                   <h4>You currently have</h4>
 
-
                   <div className="boxes">
                     <div className="box">
-                      <div className="number counter">13</div>
-                      <p>All <br /> Services</p>
+                      <Link to="../services">
+                        <div className="number counter">13</div>
+                        <p>All <br /> Services</p>
+                      </Link>
                     </div>
                     <div className="box">
-                      <div className="number counter">2</div>
-                      <p>Live <br /> Services</p>
+                      <Link to="../clients">
+                        <div className="number counter">2</div>
+                        <p>All <br /> Clients</p>
+                      </Link>
                     </div>
                     <div className="box">
-                      <div className="number counter">5</div>
-                      <p>Pandding <br /> Results</p>
+                      <Link to="../insights">
+                        <div className="number counter">5</div>
+                        <p>Total <br /> Insights</p>
+                      </Link>
                     </div>
                   </div>
 
                   <div className="add-btn">
-                    <a href="create-campaign.html"><img src="./img/rocket.png" alt="rocket" /> Create
+                    <Link to="../add-product" ><img src="./img/rocket.png" alt="rocket" /> Create
                       new
-                      Service</a>
+                      Product</Link>
                   </div>
 
                   <div className="boxes">
@@ -54,8 +60,8 @@ const Dashboard = () => {
                   </div>
 
                   <div className="add-btn">
-                    <a href="create-campaign.html"><img src="./img/rocket.png" alt="rocket" /> Create
-                      Client</a>
+                    <Link to='../add-post'><img src="./img/rocket.png" alt="rocket" /> Create
+                      Post</Link>
                   </div>
                 </div>
               </div>
@@ -72,8 +78,8 @@ const Dashboard = () => {
 
                   <h4>What’s up with Yootribe ?</h4>
 
-                  <p><strong><a href="#"><img src="./img/spotify.png" alt="spotify"
-                    className="img-fluid" /></a>
+                  <p><strong><Link to='/admin/dashboard'><img src="./img/spotify.png" alt="spotify"
+                    className="img-fluid" /></Link>
                     and Yootribe partnership to create NFT !</strong></p>
                   <img src="./img/img4.png" alt="" className="img-fluid mb-35" />
                   <p>Content of a page when looking at its layout. The point of using Loremp <br />
