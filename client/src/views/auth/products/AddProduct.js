@@ -1,40 +1,52 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Editor } from '@tinymce/tinymce-react';
 import Aside from '../../../components/auth/lib/Aside'
 import Banner from '../../../components/auth/lib/Banner'
 import { Link } from 'react-router-dom';
-import { data } from 'jquery';
 
 const AddProduct = () => {
-  const editorRef = useRef(null);
-  const log = () => {
-    if (editorRef.current) {
-      console.log(editorRef.current.getContent());
-    }
-  };
 
-  const [data, setData] = useState({
+  const [product, setProduct] = useState({
     title: '',
     banner: '',
     desc: '',
-    category: '',
+    category: ''
   });
 
   const handleInput = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-
-    console.log("Title- ", data)
-
-    setData({
-      ...data,
-      [name]: value
-    });
+    const { name, value } = e.target;
+    setProduct({ ...product, [name]: value });
   }
+
+  const parseEditorData = (desc, editor) => {
+    //desc is the current value of the text editor
+    // editor is an object that holds the html element that in this case is the text area where the name prop will be stored.
+    const { targetElm } = editor;
+    // This name value references the prop that you pass as textAreaName (desc in your case)
+    const { name } = targetElm;
+    // This function returns an object that your handle change can parse correctly
+    return {
+      target: {
+        name,
+        value: desc
+      }
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    console.log('useEffect Product - ', product);
+    setProduct({
+      title: '',
+      banner: '',
+      category: '',
+      desc: '',
+      editor: ''
+    });
   }
+
+
 
 
 
@@ -51,7 +63,7 @@ const AddProduct = () => {
                 <form id='form' onSubmit={handleSubmit} encType="multipart/form-data">
                   <div className="form-group">
                     <label htmlFor="title">Title</label>
-                    <input type="text" onChange={handleInput} name="title" id="title" className="form-control" />
+                    <input type="text" onChange={handleInput} value={product.title} name="title" id="title" className="form-control" />
                   </div>
 
                   <div className="row">
@@ -65,13 +77,17 @@ const AddProduct = () => {
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="editors">Description</label>
-                    <Editor name="desc" onChange={handleInput} onInit={(evt, editor) => editorRef.current = editor} />
+                    <label htmlFor="desc">Description</label>
+                    <Editor
+                      onEditorChange={(desc, editor) =>
+                        handleInput(parseEditorData(desc, editor))
+                      }
+                      textareaName="desc" />
                   </div>
 
                   <div className="form-group">
                     <label htmlFor="category">Category</label>
-                    <input type="text" onChange={handleInput} name="category" id="category" className="form-control" />
+                    <input type="text" onChange={handleInput} value={product.category} name="category" id="category" className="form-control" />
                   </div>
 
                   <div className="form-group preview-campaign">

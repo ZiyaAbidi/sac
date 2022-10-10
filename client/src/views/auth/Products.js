@@ -27,7 +27,6 @@ const ServicesProduct = () => {
 
             <ListTable />
 
-
             <Pagination />
           </div>
         </div>

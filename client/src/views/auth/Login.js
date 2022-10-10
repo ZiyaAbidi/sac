@@ -20,30 +20,30 @@ const Login = () => {
             <div className="col-md-12">
               <div className="auth_form">
                 <form>
-                  <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" />
+                  <div className="mb-3">
+                    <label htmlFor="email" className="form-label">Email address</label>
+                    <input type="email" className="form-control" id="email" />
                   </div>
 
-                  <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" />
+                  <div className="mb-3">
+                    <label htmlFor="password" className="form-label">Password</label>
+                    <input type="password" className="form-control" id="password" />
                   </div>
 
-                  <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  <div className="mb-3 form-check">
+                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                    <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
                   </div>
 
-                  <p class="forget">
+                  <p className="forget">
                     <Link to='/forget-password'>Forget Password ? </Link>
                   </p>
 
-                  <div class="mb-3">
-                    <button type="submit" class="btn btn-primary">Login</button>
+                  <div className="mb-3">
+                    <button type="submit" className="btn btn-primary">Login</button>
                   </div>
 
-                  <p class="signup">
+                  <p className="signup">
                     Don't have an account ? <Link to='/register'> Sign Up.</Link>
                   </p>
                 </form>

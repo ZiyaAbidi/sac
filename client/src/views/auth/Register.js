@@ -1,8 +1,69 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import Banner from '../../components/lib/Banner'
 
 const Register = () => {
+    const [register, setRegister] = useState({
+        user: '',
+        email: '',
+        img: '',
+        password: '',
+        new_password: '',
+        check: ''
+    });
+
+    const handleInput = (e) => {
+        const { name, value } = e.target;
+
+        setRegister({ ...register, [name]: value })
+        // console.log('User- ', register);
+    }
+
+    const navigate = useNavigate()
+
+    const addUser = (e) => {
+        e.preventDefault();
+        console.log('User- ', register);
+        const { user, email, img, password, new_password, check } = register;
+
+        if (user === '') {
+            console.log('user field required..!');
+        } else if (email === '') {
+            console.log('email field required..!');
+        } else if (!email.includes('@')) {
+            console.log('email not valid..!');
+        } else if (password === '') {
+            console.log('password field required..!');
+        } else if (password.length < 5) {
+            console.log('password lenght 5 charector..!');
+        } else if (new_password === '') {
+            console.log('new_password field required..!');
+        } else if (password != new_password) {
+            console.log('password not match..!');
+        } else if (check === '') {
+            console.log('check field required..!');
+        } else {
+            console.log('Data submit...!!!!');
+
+            setRegister({
+                user: '',
+                email: '',
+                img: '',
+                password: '',
+                new_password: '',
+                check: ''
+            })
+
+            navigate("/login");
+
+        }
+
+
+    }
+
+
+
+
     return (
         <main className='about_pg'>
             <Banner title="Register" desc="Als Branchenexperten inspirieren wir weltweit Führungskräfte" banner="banner2.jpg" />
@@ -19,38 +80,43 @@ const Register = () => {
 
                         <div className="col-md-12">
                             <div className="auth_form">
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="user" class="form-label">User Name</label>
-                                        <input type="text" class="form-control" id="user" />
+                                <form encType="multipart/form-data">
+                                    <div className="mb-3">
+                                        <label htmlFor="user" className="form-label">User Name</label>
+                                        <input type="text" name='user' onChange={handleInput} className="form-control" id="user" />
                                     </div>
 
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Email address</label>
-                                        <input type="text" class="form-control" id="email" />
+                                    <div className="mb-3">
+                                        <label htmlFor="email" className="form-label">Email address</label>
+                                        <input type="text" name='email' onChange={handleInput} className="form-control" id="email" />
                                     </div>
 
-                                    <div class="mb-3">
-                                        <label for="password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="password" />
+                                    <div className="mb-3">
+                                        <label htmlFor="img" className="form-label">Upload Image</label>
+                                        <input type="file" name='img' onChange={handleInput} className="form-control" id="img" accept='.png, .jpg, .jpeg' />
                                     </div>
 
-                                    <div class="mb-3">
-                                        <label for="confirm_password" class="form-label">Confirm Password</label>
-                                        <input type="password" class="form-control" id="confirm_password" />
+                                    <div className="mb-3">
+                                        <label htmlFor="password" className="form-label">Password</label>
+                                        <input type="password" name='password' onChange={handleInput} className="form-control" id="password" />
                                     </div>
 
-                                    <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    <div className="mb-3">
+                                        <label htmlFor="new_password" className="form-label">Confirm Password</label>
+                                        <input type="password" name='new_password' onChange={handleInput} className="form-control" id="new_password" />
                                     </div>
 
-                                    <div class="mb-3">
-                                        <button type="submit" class="btn btn-primary">Register</button>
+                                    <div className="mb-3 form-check">
+                                        <input type="checkbox" name='check' onChange={handleInput} className="form-check-input" id="check" />
+                                        <label className="form-check-label" htmlFor="check">Check me out</label>
                                     </div>
 
-                                    <p class="signup">
-                                    Already have an account ? <Link to='/login'> Sign In.</Link>
+                                    <div className="mb-3">
+                                        <button type="submit" onClick={addUser} className="btn btn-primary">Register</button>
+                                    </div>
+
+                                    <p className="signup">
+                                        Already have an account ? <Link to='/login'> Sign In.</Link>
                                     </p>
                                 </form>
                             </div>
